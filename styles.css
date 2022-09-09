@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 90%;
+    padding: 2em 2em 0 2em;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Text */
+
+.faq-text {
+    color: black;
+    font-size: 35px;
+    margin-top: 2em;
+    margin-left: 0.2em;
+}
+
+.card {
+    display: flex;
+    background-color: white;
+    color: hsl(240, 6%, 50%);
+    height: 500px;
+    width: 900px;
+    border-radius: 5%;
+    box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img-side {
+    width: 50%;
+    position: relative;
+}
+
+.bg-pattern {
+    width: 220%;
+    bottom: 300px;
+    right: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.woman-img {
+    bottom: 900px;
+    right: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.illustration-box {
+    right: 350px;
+    bottom: 110px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.mobile-img {
+    display: none;
+}
+
+/* Accordion */
+
+.accordion {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    color: hsl(240, 6%, 50%);
+    background-color: white;
+    cursor: pointer;
+    padding: 18px;
+    margin: 0;
+    width: 80%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.accordion .container {
+    position: relative;
+    margin: 10px 10px;
+}
+
+.accordion .label {
+    position: relative;
+    padding: 5px 0;
+}
+
+.accordion .label::before {
+    content: url(chevron-down.svg);
+    color: hsl(14, 88%, 65%);
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 15px;
+    transform: translateY(-50%);
+}
+
+.accordion .container.active .label::before {
+    content: url(chevron-up.svg);
+    color: hsl(14, 88%, 65%);
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 15px;
+    transform: translateY(-50%);
+}
+
+.accordion .container.active .panel {
+    height: auto;
+}
+
+.active {
+    color: black;
+    font-weight: 700;
+}
+
+.label:hover {
+    color: hsl(14, 88%, 65%);
+}
+  
+.panel {
+    font-weight: 400;
+    color: hsl(240, 6%, 50%);
+    background-color: white;
+    font-size: 13px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.faq-line {
+    margin: 0;
+    width: 100%;
+    margin-left: 0.7em;
+    border-width: 0.01em;
+    color: hsl(240, 5%, 91%);
+}
+
+.arrows {
+    text-align: end;
+    color: hsl(14, 88%, 65%);
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        padding: 5em 4em 0 4em;
+    }
+
+    .card {
+        display: grid;
+        height: 550px;
+        width: 350px;
+        text-align: center;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .mobile-img {
+        display: block;
+        position: fixed;
+        height: 100px;
+        width: 100px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-bg-pattern {
+        display: block;
+        position: absolute;
+        width: 250%;
+        left: 50px;
+        bottom: 215px;
+    }
+    
+    .mobile-woman-img {
+        display: block;
+        position: absolute;
+        width: 250%;
+        left: 50px;
+        bottom: 250px;
+    }
+
+    .accordion {
+        width: auto;
+    }
+
+    .img-side {
+        width: 0%;
+        display: none;
+    }
+
+    .faq-text {
+        text-align: center;
+        margin: 1em auto;
+    }
+}
